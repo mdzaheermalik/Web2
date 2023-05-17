@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Creating a Website</title>
+	<link href="https://fonts.googleapis.com/css2?family=Bentham&family=Gabriela&family=IBM+Plex+Sans+JP:wght@200&family=Merriweather&display=swap" rel="stylesheet">
+	<style type="text/css">
+		html{
+			scroll-behavior: smooth;
+		}
+
+		/*CSS Variables*/
+		:root{
+			--navbar-height:59px;
+		}
+
+		body{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		
+	#navbar{
+		display: flex;
+		align-items: center;
+		position: sticky;
+		top: 0px;
+		padding-left: 2%;
+		font-family: cursive;
+		font-size: 2.5em;
+		margin-bottom: 20px;
+
+
+	}
+	#navbar::before{
+		content: "";
+		background-color: black;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
+		opacity: 0.5;
+
+	}
+
+	#navbar ul{
+	display: flex;
+	font-family: 'Baloo Bhai',cursive;
+
+}
+#navbar ul li{
+	list-style: none;
+	font-size: 1.3rem;
+}
+
+#navbar ul li a{
+	display: block;
+	padding: 3px 22px;
+	border-radius: 20px;
+	text-decoration: none;
+	color: white;
+}
+
+#navbar ul li a:hover{
+	color: black;
+	background-color: white;
+}
+	#home{
+		display: flex;
+		height: 800px;
+		flex-direction: column;
+		margin-bottom: 40px;
+		/*padding: 3px 100px;*/
+		/*justify-content: center;
+		align-items: center;*/
+	}
+	#home h1{
+		color: black;
+		text-align: center;
+		font-family: Merriweather;
+		font-size: 2.5em;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.serivce{
+
+		width: 95%;
+		min-height: 250px;
+		margin-top: 20px;
+		margin: 20px;
+		display: flex;
+  		justify-content: space-between;
+ 	    align-items: center;
+ 	    cursor: pointer;
+
+
+	}
+	.service .box{
+		padding: 30px;
+		border-radius: 20px;
+		
+	
+	}	
+	.service .box img{
+		width: 20%;
+		min-height: 200px;
+		float: left;
+		text-align: center;
+	}	
+	.box img:hover{
+		transform: scale(1.2);
+	}
+		
+	.box img:nth-child(2){
+			margin-right: 5%;
+			margin-left: 5%;
+		}	
+	p{
+	text-align: center;
+	font-size: 1.5rem;
+	font-family: Merriweather;
+	}	
+	.h-primary-bed{
+		color: black;
+		text-align: center;
+		font-family: Merriweather;
+		font-size: 2.5em;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.h-primary-teatable{
+		color: black;
+		text-align: center;
+		font-family: Merriweather;
+		font-size: 2.5em;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.h-primary-chair{
+		color: black;
+		text-align: center;
+		font-family: Merriweather;
+		font-size: 2.5em;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.h-primary-dining{
+		color: black;
+		text-align: center;
+		font-family: Merriweather;
+		font-size: 2.5em;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.btn{
+		height: 70px;
+		width: 150px;
+		padding: 10px;
+		border-radius: 20px;
+		font-size: 1.5em;
+		display: block;
+		margin: auto;
+		background-color: cyan;
+		cursor: pointer;
+	}
+	.btn:hover{
+		transform: scale(1.2);
+	}
+	.center{
+		margin-top: 20px;
+	    text-align: center;
+	    background-color: lightgray;
+}
+.contact{
+	position: relative;
+
+}
+.contact-box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
+}
+.contact-box input,
+.contact-box textarea{
+	width: 100%;
+	border-radius: 10px;
+	padding: 0.5em;
+	font-size: 1.1em;
+}
+.contact-box form{
+	width: 40%;
+}
+.h-primary-contact{
+	color: black;
+		text-align: center;
+		font-family: Merriweather;
+		font-size: 2.5em;
+		margin-top: 10px;
+		margin-bottom: 10px;
+}
+
+	</style>
+</head>
+<body>
+
+
+<nav id="navbar">
+			Z Furniture
+		<ul>
+			<li><a href="#home">HOME</a></li>
+			<li><a href="#home-container">SOFA</a></li>
+			<li><a href="#bed">BED</a></li>
+			<li><a href="#chairs">CHAIRS</a></li>
+			<li><a href="#dining">DINING TABLE</a></li>
+			<li><a href="#contact">CONTACT</a></li>
+		</ul>
+</nav>
+<section id="home">
+	<h1 class="h-primary">Select Your Favourite SOFA</h1>
+	<img src="C:\Users\91939\Downloads\sofa2.jpg" height="730px;">
+	<button class="btn" onclick="order()">Order Now</button>
+</section>
+<section class="home-container">
+	<h1 class="h-primary-container"></h1>
+	<div class="serivce">
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\sofa3.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\sofa4.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\sofa5.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\sofa6.jpeg">
+		</div>
+	</div>
+</section>
+<p>Sofa sets are not only functional but also a stylish addition to any living room or entertainment area, and they come in various designs, materials, and colors to suit different tastes and preferences. From cozy traditional designs to sleek modern styles, there is a sofa set to fit any home decor.</p>
+<button class="btn" onclick="order()">Order Now</button>
+<section class="home-container">
+	<h1 class="h-primary-container"></h1>
+	<div class="serivce">
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\sofa7.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\sofa8.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\sofa9.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\sofa10.jpeg">
+		</div>
+
+	</div>
+</section>
+
+<section class="home-container">
+	<h1 class="h-primary-container"></h1>
+	<div class="serivce">
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\sofaf11.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\sofa12.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\sofa3.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\sofa8.jpeg">
+		</div>
+	</div>
+
+</section>
+<p>Sofa sets are versatile furniture pieces that can serve as the centerpiece of a room, providing a comfortable space to relax, socialize, and entertain guests. Additionally, with the rise of remote work and virtual meetings, sofa sets can also be used as a comfortable and stylish home office setup.</p>
+<button class="btn" onclick="order()">Order Now</button>
+<section class="bed">
+	<h1 class="h-primary-bed">Select Your Favourite BED</h1>
+	<div class="serivce">
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\bed1.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\bed2.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\bed3.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\bed4.jpeg">
+		</div>
+	</div>
+</section>
+	<p>A furniture bed is a crucial piece of furniture that provides a comfortable and supportive place to rest and sleep, and it comes in a variety of styles, sizes, and materials to fit different needs and preferences.A furniture bed is not just a place to sleep; it can also serve as a statement piece in a bedroom, contributing to the overall decor and style of the space. </p>
+	<button class="btn" onclick="order()">Order Now</button>
+<section class="bed">
+	<div class="serivce">
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\bed5.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\bed6.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\bed7.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\bed8.jpeg">
+		</div>
+	</div>
+</section>
+
+<section class="chairs">
+	<h1 class="h-primary-chair">Select Your Favourite CHAIRS</h1>
+	<div class="serivce">
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\chair1.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\chari2.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\chair3.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\chair4.jpeg">
+		</div>
+	</div>
+</section>
+
+<section class="chairs">
+	
+	<div class="serivce">
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\chair5.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\chair6.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\chair7.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\chair8.jpeg">
+		</div>
+	</div>
+</section>
+<p>Chairs are not just objects to sit on, but reflections of our personal style and comfort, and an extension of our personality that we share with the world.Chairs have evolved over centuries to become more than just a functional piece of furniture; they are now a symbol of innovation, design, and creativity, capable of transforming any space into an oasis of comfort and style.</p>
+<button class="btn" onclick="order()">Order Now</button>
+
+<section class="dining">
+	<h1 class="h-primary-dining">Select Your Favourite Dining Table</h1>
+	<div class="serivce">
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\dining1.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\dining2.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\dining3.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\dining4.jpeg">
+		</div>
+	</div>
+</section>
+
+<section class="dining">
+	
+	<div class="serivce">
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\dining5.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\dining6.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\dining7.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\dining8.jpeg">
+		</div>
+	</div>
+</section>
+<p>The dining table is not just a piece of furniture, but a hub of conversation, connection, and delicious food shared with loved ones.The dining table has witnessed countless meals, from joyous celebrations to heartfelt conversations, making it a centerpiece of memories that last a lifetime.</p>
+<button class="btn" onclick="order()">Order Now</button>
+<section class="teatable">
+	<h1 class="h-primary-teatable">Select Your Favourite ITEMS</h1>
+	<div class="serivce">
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\pillow.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\pillow2.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\almara1.jpeg">
+		</div>
+		<div class="box">
+			<img src="C:\Users\91939\Downloads\almara2.jpeg">
+		</div>
+	</div>
+	<button class="btn" onclick="order()">Order Now</button>
+</section>
+<section class="contact">
+	<h1 class="h-primary-contact">Contact</h1>
+	<div class="contact-box">
+		<form action="">
+			<div class="form-group">
+			<label for="name">Name</label>
+			<input type="Name" placeholder="Enter Name">
+			</div>
+			<div class="form-group">
+			<label for="name">Email</label>
+			<input type="email" placeholder="Enter Email">
+			</div>
+			<div class="form-group">
+			<label for="name">Phone Number</label>
+			<input type="number" placeholder="Enter Number">
+			</div>
+			<div class="form-group">
+				<label for="message">Message: </label>
+				<textarea name="message" id="message" cols="30" rows="10"></textarea>
+			</div>
+		</form>
+	</div>
+</section>
+<footer>
+	<div class="center">
+		Copyright &copy; www.Z Furniture.com. All Rights Reserved!
+	</div>
+</footer>
+<script type="text/javascript">
+	function order(){
+		alert("Your Order Has Been Done");
+	}
+	// order()
+</script>
+
+</body>
+</html>
